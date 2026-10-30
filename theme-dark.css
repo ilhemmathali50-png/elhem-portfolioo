@@ -1,0 +1,24 @@
+/* Portfolio Magazine — Dark editorial direction */
+:root { --ink:#f3f4ef; --teal:#72d1ca; --paper:#1e2627; }
+html, body { background:#151a1c !important; color:#f5f4ee !important; }
+header { color:#f5f4ee !important; border-bottom:1px solid #ffffff18; }
+header span { color:#b4c0bf !important; }
+.stage { background:radial-gradient(ellipse at center,#243132 0%,#151a1c 70%) !important; }
+.book { filter:drop-shadow(0 28px 34px #000b) !important; }
+.spread { background:#20292a !important; box-shadow:inset 0 0 30px #0006, 0 0 0 1px #ffffff15 !important; }
+.page:not(.hero-cover) { background:#20292a !important; color:#f3f1ea !important; }
+.page.left { border-right:1px solid #ffffff29 !important; box-shadow:inset -14px 0 16px -20px #000c !important; }
+.page.right { box-shadow:inset 14px 0 16px -20px #000c !important; }
+.page .sub { color:#c4d0cc !important; }
+.page .small-note { color:#b2c4c0 !important; }
+.page .intro-number, .page .folio { color:#95aaa5 !important; }
+.page .eyebrow { color:#85d5ce !important; }
+.page .big, .page .split-title { color:#faf8f2 !important; }
+.page .photo-wrap { background:#f5f4ee !important; border-radius:5px; padding:6px; box-shadow:0 8px 20px #0004; }
+.photo-grid { gap:12px !important; }
+.photo-grid img { background:#f5f4ee !important; border:6px solid #f5f4ee; border-radius:5px; box-shadow:0 8px 20px #0004; object-fit:contain !important; }
+.controls button { background:#2a3435 !important; color:#f7f4eb !important; border-color:#59706b !important; }
+.controls button:hover:not(:disabled) { background:#355754 !important; }
+#counter, footer, .mobilehint { color:#b5c4c0 !important; }
+.hero-cover { background:#112f31 !important; }
+.hero-cover .cover-foot { color:#dbeae4; }
