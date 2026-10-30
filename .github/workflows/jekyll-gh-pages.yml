@@ -24,6 +24,8 @@ jobs:
           unzip -q ".github/workflows/elhem-portfolio-magazine.zip" -d /tmp/elhem-magazine
           cp -a /tmp/elhem-magazine/elhem-portfolio-magazine/. _site/
           test -f _site/index.html
+          cp theme-dark.css _site/theme-dark.css
+          sed -i 's@</head>@<link rel="stylesheet" href="theme-dark.css"></head>@' _site/index.html
           test -f _site/assets/force-real.webp
           echo "Magazine and images ready"
       - name: Configure Pages
