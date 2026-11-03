@@ -16,19 +16,19 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Prepare website from uploaded ZIP
+      - name: Prepare website
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p _site
-          unzip -q ".github/workflows/elhem-portfolio-magazine.zip" -d /tmp/elhem-magazine
-          cp -a /tmp/elhem-magazine/elhem-portfolio-magazine/. _site/
+          mkdir -p _site/assets
+          cp index.html _site/index.html
+          cp theme-dark.css _site/theme-dark.css
+          cp assets/*.webp _site/assets/
           cp assets/cover-2024-2026.webp _site/assets/cover.webp
           test -f _site/index.html
-          cp theme-dark.css _site/theme-dark.css
-          sed -i 's@</head>@<link rel="stylesheet" href="theme-dark.css"></head>@' _site/index.html
+          test -f _site/assets/cover.webp
           test -f _site/assets/force-real.webp
-          echo "Magazine and images ready"
+          echo "Portfolio website ready"
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload website
