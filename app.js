@@ -67,10 +67,37 @@ function makeBrief(){
   result.scrollIntoView({behavior:"smooth",block:"nearest"});
  });
 }
+function initMobile(){
+ const navLinks=$(".mobile-tabs a");
+ const keys=["home","editions","atelier","journal","story"];
+ const setActive=id=>{if(!keys.includes(id))return;navLinks.forEach(a=>{if(a.dataset.tab===id)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});};
+ navLinks.forEach(a=>a.addEventListener("click",()=>setActive(a.dataset.tab)));
+ if("IntersectionObserver" in window){const observer=new IntersectionObserver(entries=>{const e=entries.filter(x=>x.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];if(e)setActive(e.target.id);},{rootMargin:"-18% 0px -45% 0px",threshold:[0,.1,.2,.4,.6]});keys.map(id=>document.getElementById(id)).filter(Boolean).forEach(el=>observer.observe(el));}
+ let xStart=0,yStart=0;const book=$("#editionBook");
+ book.addEventListener("touchstart",e=>{if(e.touches.length!==1)return;xStart=e.touches[0].clientX;yStart=e.touches[0].clientY;},{passive:true});
+ book.addEventListener("touchend",e=>{if(!e.changedTouches.length)return;const dx=e.changedTouches[0].clientX-xStart;const dy=e.changedTouches[0].clientY-yStart;if(Math.abs(dx)>75&&Math.abs(dx)>Math.abs(dy)*1.4&&Math.abs(dy)<100)updateBook(selectedIndex+(dx<0?1:-1));},{passive:true});
+ let deferredPrompt=null;const button=$("#installApp"),overlay=$("#installHelp");
+ window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferredPrompt=e;});
+ const standalone=()=>matchMedia("(display-mode: standalone)").matches||navigator.standalone===true;
+ const isiOS=()=>/iPhone|iPad|iPod/.test(navigator.userAgent);
+ const isSafari=()=>/Safari/.test(navigator.userAgent)&&!/CriOS|FxiOS|EdgiOS/.test(navigator.userAgent);
+ if(standalone())button.hidden=true;
+ const close=()=>{overlay.hidden=true;button.focus();};
+ $("#dismissInstall").addEventListener("click",close);$("#installConfirm").addEventListener("click",close);
+ overlay.addEventListener("click",e=>{if(e.target===overlay)close();});
+ document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!overlay.hidden)close();});
+ button.addEventListener("click",async()=>{
+  if(deferredPrompt){const p=deferredPrompt;deferredPrompt=null;await p.prompt();return;}
+  $("#installInstructions").textContent=isiOS()?(isSafari()?"Sur iPhone : touchez Partager, puis « Sur l’écran d’accueil » et confirmez.":"Ouvrez ce site dans Safari, puis touchez Partager et « Sur l’écran d’accueil »."):"Ouvrez le menu du navigateur, puis choisissez « Installer l’application » ou « Ajouter à l’écran d’accueil » si cette option est disponible.";
+  overlay.hidden=false;$("#dismissInstall").focus();
+ });
+ window.addEventListener("appinstalled",()=>{button.hidden=true;overlay.hidden=true;});
+ if("serviceWorker" in navigator&&location.protocol==="https:")window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js").catch(e=>console.warn("Service Worker:",e)));
+}
 function init(){
- $("[data-fallback]").forEach(img=>{img.onerror=()=>img.classList.add("is-missing");if(img.complete&&!img.naturalWidth)img.classList.add("is-missing");});
+ $$("[data-fallback]").forEach(img=>{img.onerror=()=>img.classList.add("is-missing");if(img.complete&&!img.naturalWidth)img.classList.add("is-missing");});
  $("#year").textContent=new Date().getFullYear();
- makeBook();makeAtelier();makeJournal();makeAbout();makeBrief();
+ makeBook();makeAtelier();makeJournal();makeAbout();makeBrief();initMobile();
  $("#closeProject").addEventListener("click",()=>{ $("#project").hidden=true;$("#editions").scrollIntoView({behavior:"smooth"});});
  $("#nextProject").addEventListener("click",()=>openProject(selectedIndex+1));
  $("#menuBtn").addEventListener("click",()=>{let open=$("#nav").classList.toggle("open");$("#menuBtn").setAttribute("aria-expanded",String(open));$("#menuBtn").setAttribute("aria-label",open?"Fermer le menu":"Ouvrir le menu");});
