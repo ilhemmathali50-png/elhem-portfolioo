@@ -1,11 +1,39 @@
-# ELHEM MATHELI · Portfolio Magazine
+# ELHEM MATHELI — THE CREATIVE EDITIONS
 
-Prototype de portfolio interactif : couverture, navigation au clavier et par balayage, présentation de HerbTrésor, Jus Nour, ForceClean, Fait Maison et Selected Works.
+Portfolio web éditorial mobile-first de Brand Designer & Content Creator.
 
-## Important : images
-La première version GitHub contient le moteur de présentation mais pas encore les assets images. Pour voir tous les projets illustrés, copier le dossier `assets/` du ZIP fourni dans le chat à la racine du dépôt (Upload files). Les noms attendus sont `herb-abricot.webp`, `jus-lemon.webp`, `force-real.webp`, `fait-bsissa.webp` et `mybio.webp`.
+## Design
+Palette institutionnelle beige, teal et bordeaux. Police **Instrument Serif** pour les titres, **DM Sans** pour le texte, **Amiri** pour les futurs textes arabes. Chaque projet conserve sa propre palette.
 
-## Publier
-Dans Settings > Pages > Build and deployment, sélectionner Deploy from a branch > main / root. La publication Pages doit être activée dans les paramètres du dépôt, le dépôt est public.
+## Quatre expériences clés
 
-Le prototype offre une transition animée, mais pas encore une simulation physique de courbure du papier.
+1. **Interactive Art Book** : table des matières, sélection d'une édition, feuille de projet.
+2. **Reveal the Design** : comparateur avant/après utilisable au toucher, à la souris ou au clavier.
+3. **The Creative Journal** : notes éditoriales ouvrables sans duplication des projets.
+4. **Start Your Brand Story** : brief commercial guidé et copiable; aucun agent IA payant ni backend nécessaire.
+
+### Et en plus
+**The Logo Atelier** : galerie distincte pour les logos exploratoires; 6 emplacements, avec possibilité d'ajouter d'autres études.
+4 projets de démonstration : Élya Natura, MÉTALLUX, ForceClean et TrackSolid Pro.
+About Me, diplômes, réseaux sociaux, contact et effets compatibles avec la préférence « moins d'animations ».
+
+## Fichiers
+- `index.html` : structure du site.
+- `styles.css` : mise en page et typographie responsive.
+- `content.js` : **votre seul fichier principal à personnaliser** (projets, texte, logos, diplômes, liens).
+- `app.js` : interactions.
+- `ASSET_CHECKLIST.md` : noms et dimensions des photos à ajouter.
+
+## Prévisualisation
+Le site est statique. Servir le dossier avec un serveur web local : `python3 -m http.server 8000`, puis ouvrir `http://localhost:8000`. Il peut aussi être déployé avec GitHub Pages.
+
+## Limites
+- Les photos finales ne sont pas fournies et n'ont pas été inventées.
+- Aucun diplôme, chiffre de résultat client, email ou réseau social fictif n'est présenté comme authentique.
+- Le brief **n'est pas envoyé automatiquement** : copie du texte, puis WhatsApp/email après configuration.
+- Ce n'est ni une boutique, ni un agent IA connecté, ni un hébergement de formulaires.
+- Les animations spécifiques de produits et vidéos 3D pourront être ajoutées après réception des assets.
+- Avant mise en production, tester sur de vrais appareils et vérifier la disponibilité de vos contenus, liens et droits d'utilisation.
+
+## Publication
+Tout a été préparé sur la branche de travail `creative-editions-v3`, sans modifier directement la branche `main`. Examiner puis fusionner la pull request pour remplacer le prototype existant.
