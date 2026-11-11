@@ -37,3 +37,7 @@ Le site est statique. Servir le dossier avec un serveur web local : `python3 -m 
 
 ## Publication
 Tout a été préparé sur la branche de travail `creative-editions-v3`, sans modifier directement la branche `main`. Examiner puis fusionner la pull request pour remplacer le prototype existant.
+
+## Version Mobile App (PWA)
+
+La même expérience est installable via le navigateur : icônes PNG 192 et 512, manifest, service worker, barre de navigation mobile, swipe horizontal entre éditions, écran de conseils d'installation iOS et Android. Elle reste accessible en site classique sur ordinateur. La mise en ligne HTTPS et le test sur téléphone réel sont nécessaires pour vérifier l'installation et le fonctionnement hors ligne. Le contenu de la galerie doit être fourni par la créatrice.
