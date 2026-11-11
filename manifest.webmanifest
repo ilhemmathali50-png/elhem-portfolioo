@@ -1,0 +1,20 @@
+{
+  "id": "./",
+  "name": "Elhem Matheli — The Creative Editions",
+  "short_name": "Elhem Editions",
+  "description": "Portfolio interactif de branding, packaging et creative content d’Elhem Matheli.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f0e7",
+  "theme_color": "#155d58",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "./app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
