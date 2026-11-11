@@ -2,8 +2,12 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#f5f0e7">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Elhem Editions">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./app-icon.svg" type="image/svg+xml">
 <meta name="description" content="Elhem Matheli, Brand Designer & Content Creator. Un portfolio éditorial interactif où chaque projet raconte une histoire de marque.">
 <meta property="og:title" content="Elhem Matheli | The Creative Editions">
 <meta property="og:description" content="Brand Identity · Packaging · Creative Content. Explorez un livre de design interactif.">
@@ -34,7 +38,7 @@
      <h1>Elhem<br><em>Matheli.</em></h1>
      <p class="hero-deck">Your brand deserves <i>a story worth telling.</i></p>
      <p class="hero-intro">Je donne forme aux idées à travers des identités visuelles singulières, des packagings réfléchis et des contenus créatifs qui font vivre les marques.</p>
-     <div class="actions"><a class="btn btn-teal" href="#editions">Explorer les éditions <span>↗</span></a><a class="text-link" href="#story">Start your brand story ↗</a></div>
+     <div class="actions"><a class="btn btn-teal" href="#editions">Explorer les éditions <span>↗</span></a><a class="text-link" href="#story">Start your brand story ↗</a></div><button class="install-link" id="installApp" type="button">⌁ &nbsp; Ajouter à l’écran d’accueil</button>
    </div>
    <div class="hero-art">
       <div class="paper-mat">
@@ -129,5 +133,7 @@
  <div class="closing-bottom"><span>© <span id="year"></span> ELHEM MATHELI</span><span>BRANDING · PACKAGING · CREATIVE CONTENT</span><a href="#home">BACK TO TOP ↑</a></div>
 </section>
 </main>
+<nav class="mobile-tabs" aria-label="Navigation application"><a href="#home" data-tab="home" aria-current="page"><span class="tab-icon" aria-hidden="true">⌂</span>Accueil</a><a href="#editions" data-tab="editions"><span class="tab-icon" aria-hidden="true">▦</span>Éditions</a><a href="#atelier" data-tab="atelier"><span class="tab-icon" aria-hidden="true">✧</span>Logos</a><a href="#journal" data-tab="journal"><span class="tab-icon" aria-hidden="true">✎</span>Journal</a><a href="#story" data-tab="story"><span class="tab-icon" aria-hidden="true">↗</span>Projet</a></nav>
+<div id="installHelp" class="install-help" hidden role="dialog" aria-modal="true" aria-labelledby="installTitle"><div class="install-sheet"><button type="button" id="dismissInstall" class="dismiss-install" aria-label="Fermer">×</button><span class="section-index">THE CREATIVE EDITIONS / MOBILE</span><h2 id="installTitle">Votre art book,<br><i>dans votre poche.</i></h2><p id="installInstructions">Ajoutez cette application à votre écran d’accueil depuis les options de votre navigateur.</p><button class="btn btn-teal btn-full" id="installConfirm" type="button">Compris ✓</button></div></div>
 </body>
 </html>
