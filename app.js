@@ -68,6 +68,7 @@ function makeBrief(){
  });
 }
 function init(){
+ $("[data-fallback]").forEach(img=>{img.onerror=()=>img.classList.add("is-missing");if(img.complete&&!img.naturalWidth)img.classList.add("is-missing");});
  $("#year").textContent=new Date().getFullYear();
  makeBook();makeAtelier();makeJournal();makeAbout();makeBrief();
  $("#closeProject").addEventListener("click",()=>{ $("#project").hidden=true;$("#editions").scrollIntoView({behavior:"smooth"});});
