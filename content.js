@@ -11,11 +11,15 @@ window.PORTFOLIO = {
  ],
  projects: [
    {
+     goal:"Créer une identité cohérente et reconnaissable pour une gamme de soins naturels.", decision:"Privilégier une palette végétale, une typographie expressive et une présentation sobre des produits.",
+     identity:{"palette":[{"name":"Vert","hex":"#294936"},{"name":"Crème","hex":"#F4EFE5"},{"name":"Terracotta","hex":"#A94F32"}],"typography":["À préciser","À préciser"],"elements":["Motifs botaniques","Illustrations à préciser"],"logo":"assets/projects/elya-natura/logo.webp"},
+     products:[{"name":"Shampooing solide","mockup":"assets/projects/elya-natura/products/shampooing-mockup.webp","label":"assets/projects/elya-natura/products/shampooing-etiquette.webp"},{"name":"Sérum cuir chevelu","mockup":"assets/projects/elya-natura/products/serum-mockup.webp","label":"assets/projects/elya-natura/products/serum-etiquette.webp"},{"name":"Huile solide","mockup":"assets/projects/elya-natura/products/huile-solide-mockup.webp","label":"assets/projects/elya-natura/products/huile-solide-etiquette.webp"},{"name":"Savon enfants","mockup":"assets/projects/elya-natura/products/savon-enfants-mockup.webp","label":"assets/projects/elya-natura/products/savon-enfants-etiquette.webp"}],
+     supports:[],
      id:"elya-natura", number:"01", title:"Élya Natura", category:"Brand Identity · Packaging · Digital",
      story:"The nature of a thoughtful brand.", intro:"Un univers de soins naturels pensé pour relier identité, expérience produit et cohérence graphique.",
      challenge:"Concevoir une présence visuelle identifiable pour une marque de soins naturels, à décliner sur différents supports.",
      idea:"Une direction botanique, des formes sobres et une palette enracinée dans la nature.",
-     theme:"#294936", paper:"#e8eddf", accent:"#b77b58", foreground:"#ffffff",
+     theme:"#294936", paper:"#F4EFE5", accent:"#A94F32", foreground:"#ffffff",
      cover:"assets/projects/elya-natura/cover.webp",
      images:[
        {label:"Moodboard & inspiration",src:"assets/projects/elya-natura/moodboard.webp"},
@@ -28,6 +32,10 @@ window.PORTFOLIO = {
      deliverables:["Direction artistique","Identité visuelle","Packaging","Supports digitaux"]
    },
    {
+     goal:"Présenter une identité claire pour une activité dans le secteur métallique.", decision:"Développer une composition géométrique lisible, sobre et adaptée aux supports imprimés.",
+     identity:{"palette":[{"name":"Bleu nuit","hex":"#122e45"},{"name":"Gris clair","hex":"#dce5eb"},{"name":"Acier","hex":"#b9c6d2"}],"typography":["À préciser","À préciser"],"elements":["Construction géométrique","Proportions du symbole"],"logo":"assets/projects/metallux/logo.webp"},
+     products:[{"name":"Carte de visite","mockup":"assets/projects/metallux/products/carte-visite-mockup.webp","label":"assets/projects/metallux/products/carte-visite-etiquette.webp"},{"name":"Application de marque","mockup":"assets/projects/metallux/products/application-mockup.webp","label":"assets/projects/metallux/products/application-etiquette.webp"}],
+     supports:[],
      id:"metallux", number:"02", title:"MÉTALLUX", category:"Logo Design · Visual Identity · Print",
      story:"Strong lines. Distinct identity.", intro:"Une exploration de l'univers industriel par le symbole, les proportions et l'expression visuelle.",
      challenge:"Créer une signature graphique lisible et affirmée pour le secteur de la construction métallique.",
@@ -45,6 +53,10 @@ window.PORTFOLIO = {
      deliverables:["Logo system","Identité visuelle","Supports imprimés","Applications"]
    },
    {
+     goal:"Créer une gamme d'étiquettes lisible et cohérente pour plusieurs références de produits ménagers.", decision:"Structurer les informations et les codes couleur pour différencier les produits sans perdre la cohérence de gamme.",
+     identity:{"palette":[{"name":"Bleu","hex":"#0d6197"},{"name":"Blanc bleuté","hex":"#e0f0f7"},{"name":"Orange","hex":"#ed8d3b"}],"typography":["À préciser","À préciser"],"elements":["Hiérarchie produit","Repères colorés"],"logo":"assets/projects/forceclean/logo.webp"},
+     products:[{"name":"Liquide vaisselle","mockup":"assets/projects/forceclean/products/liquide-vaisselle-mockup.webp","label":"assets/projects/forceclean/products/liquide-vaisselle-etiquette.webp"},{"name":"Savon liquide","mockup":"assets/projects/forceclean/products/savon-liquide-mockup.webp","label":"assets/projects/forceclean/products/savon-liquide-etiquette.webp"},{"name":"Parfum de linge","mockup":"assets/projects/forceclean/products/parfum-linge-mockup.webp","label":"assets/projects/forceclean/products/parfum-linge-etiquette.webp"}],
+     supports:[],
      id:"forceclean", number:"03", title:"ForceClean", category:"Packaging · Product Labels · Print",
      story:"Designed for the everyday shelf.", intro:"Une collection de supports packaging pensée pour organiser clairement l'information et unifier une gamme.",
      challenge:"Concevoir des étiquettes fonctionnelles et cohérentes sur plusieurs formats de produits ménagers.",
@@ -62,11 +74,15 @@ window.PORTFOLIO = {
      deliverables:["Packaging design","Étiquettes","Fichiers d'impression","Mockups"]
    },
    {
+     goal:"Rendre les produits de géolocalisation plus faciles à comprendre grâce à des visuels de communication.", decision:"Associer visuels produits, messages courts et contrastes de marque dans une série de contenus adaptés aux réseaux.",
+     identity:{"palette":[{"name":"Bleu","hex":"#00a9fd"},{"name":"Orange","hex":"#f58107"},{"name":"Blanc","hex":"#ffffff"}],"typography":["À préciser","À préciser"],"elements":["Repères technologiques","Hiérarchie des messages"],"logo":"assets/projects/tracksolid/logo.webp"},
+     products:[{"name":"Campagne GT06N","mockup":"assets/projects/tracksolid/products/gt06n-mockup.webp","label":"assets/projects/tracksolid/products/gt06n-etiquette.webp"},{"name":"Campagne GT06S","mockup":"assets/projects/tracksolid/products/gt06s-mockup.webp","label":"assets/projects/tracksolid/products/gt06s-etiquette.webp"},{"name":"Campagne OBD VL505","mockup":"assets/projects/tracksolid/products/obd-vl505-mockup.webp","label":"assets/projects/tracksolid/products/obd-vl505-etiquette.webp"}],
+     supports:[],
      id:"tracksolid", number:"04", title:"TrackSolid Pro", category:"Social Media · Campaigns · Content",
      story:"Making technology easy to see.", intro:"Un langage graphique pour rendre les produits de géolocalisation clairs, visibles et engageants.",
      challenge:"Présenter des solutions GPS et leurs bénéfices dans des formats de communication digitale.",
      idea:"Une direction graphique dynamique : visuels produits, messages compréhensibles et formats social media.",
-     theme:"#0079c8", paper:"#d9edf9", accent:"#ef8a2d", foreground:"#ffffff",
+     theme:"#00a9fd", paper:"#d9edf9", accent:"#f58107", foreground:"#ffffff",
      cover:"assets/projects/tracksolid/cover.webp",
      images:[
        {label:"Brief & messages",src:"assets/projects/tracksolid/moodboard.webp"},
