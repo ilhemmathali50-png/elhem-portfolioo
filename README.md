@@ -41,3 +41,9 @@ Tout a été préparé sur la branche de travail `creative-editions-v3`, sans mo
 ## Version Mobile App (PWA)
 
 La même expérience est installable via le navigateur : icônes PNG 192 et 512, manifest, service worker, barre de navigation mobile, swipe horizontal entre éditions, écran de conseils d'installation iOS et Android. Elle reste accessible en site classique sur ordinateur. La mise en ligne HTTPS et le test sur téléphone réel sont nécessaires pour vérifier l'installation et le fonctionnement hors ligne. Le contenu de la galerie doit être fourni par la créatrice.
+
+## Organisation finale des projets — 12 novembre 2026
+
+Les **projets ne sont pas dupliqués** : le seul sommaire se trouve dans **Interactive Art Book** (ancien bloc nommé « The Editions »). Chaque chapitre a quatre parties : **Cover**, **Project Goal & Design Decision**, **Visual Identity** (logo, palette, typographie, éléments), **The Final Work** (produits en paires mockup + design à plat et comparaison avant/après intégrée). Aucun second Reveal global.
+
+Les produits de chaque marque sont déclarés sous `projects[].products` dans `content.js`. Les couleurs, logos et typographies sont propres à chaque projet. La checklist est dans `ASSET_CHECKLIST.md`.
