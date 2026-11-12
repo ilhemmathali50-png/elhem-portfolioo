@@ -32,9 +32,10 @@ window.PORTFOLIO = {
      deliverables:["Direction artistique","Identité visuelle","Packaging","Supports digitaux"]
    },
    {
+     workIntro:"Les applications de l’identité, présentées avec leurs créations graphiques à plat.",
      goal:"Présenter une identité claire pour une activité dans le secteur métallique.", decision:"Développer une composition géométrique lisible, sobre et adaptée aux supports imprimés.",
      identity:{"palette":[{"name":"Bleu nuit","hex":"#122e45"},{"name":"Gris clair","hex":"#dce5eb"},{"name":"Acier","hex":"#b9c6d2"}],"typography":["À préciser","À préciser"],"elements":["Construction géométrique","Proportions du symbole"],"logo":"assets/projects/metallux/logo.webp"},
-     products:[{"name":"Carte de visite","mockup":"assets/projects/metallux/products/carte-visite-mockup.webp","label":"assets/projects/metallux/products/carte-visite-etiquette.webp"},{"name":"Application de marque","mockup":"assets/projects/metallux/products/application-mockup.webp","label":"assets/projects/metallux/products/application-etiquette.webp"}],
+     products:[{"name":"Carte de visite","mockup":"assets/projects/metallux/products/carte-visite-mockup.webp","label":"assets/projects/metallux/products/carte-visite-design-plat.webp","flatLabel":"APPLICATION / CRÉATION À PLAT"},{"name":"Application de marque","mockup":"assets/projects/metallux/products/application-mockup.webp","label":"assets/projects/metallux/products/application-design-plat.webp","flatLabel":"APPLICATION / CRÉATION À PLAT"}],
      supports:[],
      id:"metallux", number:"02", title:"MÉTALLUX", category:"Logo Design · Visual Identity · Print",
      story:"Strong lines. Distinct identity.", intro:"Une exploration de l'univers industriel par le symbole, les proportions et l'expression visuelle.",
@@ -74,9 +75,10 @@ window.PORTFOLIO = {
      deliverables:["Packaging design","Étiquettes","Fichiers d'impression","Mockups"]
    },
    {
+     workIntro:"Chaque campagne et son visuel de communication, côte à côte.",
      goal:"Rendre les produits de géolocalisation plus faciles à comprendre grâce à des visuels de communication.", decision:"Associer visuels produits, messages courts et contrastes de marque dans une série de contenus adaptés aux réseaux.",
      identity:{"palette":[{"name":"Bleu","hex":"#00a9fd"},{"name":"Orange","hex":"#f58107"},{"name":"Blanc","hex":"#ffffff"}],"typography":["À préciser","À préciser"],"elements":["Repères technologiques","Hiérarchie des messages"],"logo":"assets/projects/tracksolid/logo.webp"},
-     products:[{"name":"Campagne GT06N","mockup":"assets/projects/tracksolid/products/gt06n-mockup.webp","label":"assets/projects/tracksolid/products/gt06n-etiquette.webp"},{"name":"Campagne GT06S","mockup":"assets/projects/tracksolid/products/gt06s-mockup.webp","label":"assets/projects/tracksolid/products/gt06s-etiquette.webp"},{"name":"Campagne OBD VL505","mockup":"assets/projects/tracksolid/products/obd-vl505-mockup.webp","label":"assets/projects/tracksolid/products/obd-vl505-etiquette.webp"}],
+     products:[{"name":"Campagne GT06N","mockup":"assets/projects/tracksolid/products/gt06n-mockup.webp","label":"assets/projects/tracksolid/products/gt06n-design-plat.webp","flatLabel":"CAMPAGNE / VISUEL"},{"name":"Campagne GT06S","mockup":"assets/projects/tracksolid/products/gt06s-mockup.webp","label":"assets/projects/tracksolid/products/gt06s-design-plat.webp","flatLabel":"CAMPAGNE / VISUEL"},{"name":"Campagne OBD VL505","mockup":"assets/projects/tracksolid/products/obd-vl505-mockup.webp","label":"assets/projects/tracksolid/products/obd-vl505-design-plat.webp","flatLabel":"CAMPAGNE / VISUEL"}],
      supports:[],
      id:"tracksolid", number:"04", title:"TrackSolid Pro", category:"Social Media · Campaigns · Content",
      story:"Making technology easy to see.", intro:"Un langage graphique pour rendre les produits de géolocalisation clairs, visibles et engageants.",
