@@ -1,69 +1,87 @@
-# Guide des photos — Elhem Matheli · The Creative Editions
+# THE CREATIVE EDITIONS — CHECKLIST DES VISUELS
 
-L'app **fonctionne sans images** : des emplacements éditoriaux seront affichés. Ajoutez vos fichiers plus tard dans les dossiers ci-dessous sans changer le code.
+**Structure validée et sans répétition** : Interactive Art Book (sommaire unique) → Cover du projet → Project Goal & Design Decision (deux phrases) → Visual Identity (logo, palette, typographies, éléments) → Final Work (mockup + étiquette / création à plat, puis reveal avant/après dans la même section).
 
-## 1. Les 4 projets — 8 fichiers chacun
+## Ce qu'il faut préparer
 
-Pour chacun des 4 dossiers `elya-natura`, `metallux`, `forceclean` et `tracksolid` :
+- Portrait cover : `assets/profile/cover.webp` (1200 × 1500 px)
+- Portrait About : `assets/profile/about.webp` (1200 × 1500 px)
+- Pour chaque projet : **1 cover** (1800 × 1350 px), **1 logo**, et autant de paires mockup/étiquette qu'il existe réellement de produits (1600 × 1200 px recommandés).
+- Avant/après : deux images de cadrage équivalent (1600 × 1000 px).
+- Couleurs HEX, noms réels des typographies, éléments graphiques si disponibles. Les polices indiquées « À préciser » sont des placeholders et non des affirmations.
+- Autres applications : ajouter les fichiers à `supports` dans `content.js`, seulement si elles sont utiles.
 
-| Fichier | Dimension conseillée | Contenu |
+## Fichiers attendus par projet
+
+### Élya Natura
+
+- Cover: `assets/projects/elya-natura/cover.webp`
+- Logo principal: `assets/projects/elya-natura/logo.webp`
+- Palette / typographies : champs `identity.palette`, `identity.typography`, `identity.elements` dans `content.js`
+- But & décision : `goal` et `decision` dans `content.js`
+- Comparateur avant/après : `assets/projects/elya-natura/reveal-before.webp`, `assets/projects/elya-natura/reveal-after.webp`
+
+| Réalisation | Mockup | Visuel à plat |
 |---|---|---|
-| `cover.webp` | 1800 × 1350 px | Image principale, beau mockup ou shooting |
-| `moodboard.webp` | 1600 × 1200 px | Inspiration, recherches ou brief visuel |
-| `logo.webp` | 1600 × 1200 px | Logo, construction ou système graphique |
-| `identity.webp` | 1600 × 1200 px | Palette, typographie, règles graphiques |
-| `packaging.webp` | 1600 × 1200 px | Packaging, supports print ou posts |
-| `applications.webp` | 1600 × 1200 px | Applications réelles et maquettes |
-| `reveal-before.webp` | 1600 × 1000 px | AVANT : croquis, étiquette à plat, brouillon |
-| `reveal-after.webp` | 1600 × 1000 px | APRÈS : résultat final, dans le même cadrage |
+| Shampooing solide | `assets/projects/elya-natura/products/shampooing-mockup.webp` | `assets/projects/elya-natura/products/shampooing-etiquette.webp` |
+| Sérum cuir chevelu | `assets/projects/elya-natura/products/serum-mockup.webp` | `assets/projects/elya-natura/products/serum-etiquette.webp` |
+| Huile solide | `assets/projects/elya-natura/products/huile-solide-mockup.webp` | `assets/projects/elya-natura/products/huile-solide-etiquette.webp` |
+| Savon enfants | `assets/projects/elya-natura/products/savon-enfants-mockup.webp` | `assets/projects/elya-natura/products/savon-enfants-etiquette.webp` |
 
-### Projets et contenus à m'envoyer
+### MÉTALLUX
 
-**Élya Natura** (`assets/projects/elya-natura/`) : logo validé, shooting produits, palettes, étiquettes exactes, visuels du packaging et photos de gamme.
+- Cover: `assets/projects/metallux/cover.webp`
+- Logo principal: `assets/projects/metallux/logo.webp`
+- Palette / typographies : champs `identity.palette`, `identity.typography`, `identity.elements` dans `content.js`
+- But & décision : `goal` et `decision` dans `content.js`
+- Comparateur avant/après : `assets/projects/metallux/reveal-before.webp`, `assets/projects/metallux/reveal-after.webp`
 
-**MÉTALLUX** (`assets/projects/metallux/`) : logo final, construction, typographie, palette, carte de visite recto/verso, enseigne et vêtements si réalisés.
+| Réalisation | Mockup | Visuel à plat |
+|---|---|---|
+| Carte de visite | `assets/projects/metallux/products/carte-visite-mockup.webp` | `assets/projects/metallux/products/carte-visite-design-plat.webp` |
+| Application de marque | `assets/projects/metallux/products/application-mockup.webp` | `assets/projects/metallux/products/application-design-plat.webp` |
 
-**ForceClean** (`assets/projects/forceclean/`) : étiquettes originales à plat, dimensions, gammes, bouteilles/pots, packaging et mockups.
+### ForceClean
 
-**TrackSolid Pro** (`assets/projects/tracksolid/`) : publications, carrousels, campagnes, couvertures de Reels, mockups GPS, avant/après visuel.
+- Cover: `assets/projects/forceclean/cover.webp`
+- Logo principal: `assets/projects/forceclean/logo.webp`
+- Palette / typographies : champs `identity.palette`, `identity.typography`, `identity.elements` dans `content.js`
+- But & décision : `goal` et `decision` dans `content.js`
+- Comparateur avant/après : `assets/projects/forceclean/reveal-before.webp`, `assets/projects/forceclean/reveal-after.webp`
 
-Ces noms désignent les **emplacements**, pas des affirmations que tous les supports ont déjà été créés.
+| Réalisation | Mockup | Visuel à plat |
+|---|---|---|
+| Liquide vaisselle | `assets/projects/forceclean/products/liquide-vaisselle-mockup.webp` | `assets/projects/forceclean/products/liquide-vaisselle-etiquette.webp` |
+| Savon liquide | `assets/projects/forceclean/products/savon-liquide-mockup.webp` | `assets/projects/forceclean/products/savon-liquide-etiquette.webp` |
+| Parfum de linge | `assets/projects/forceclean/products/parfum-linge-mockup.webp` | `assets/projects/forceclean/products/parfum-linge-etiquette.webp` |
 
-## 2. Photos personnelles
+### TrackSolid Pro
 
-- `assets/profile/cover.webp` : portrait couverture, vertical **1200 × 1500 px**.
-- `assets/profile/about.webp` : portrait About Me, vertical **1200 × 1500 px**.
-- Fournir aussi le **nom professionnel à afficher**, une courte biographie et vos spécialités exactes.
+- Cover: `assets/projects/tracksolid/cover.webp`
+- Logo principal: `assets/projects/tracksolid/logo.webp`
+- Palette / typographies : champs `identity.palette`, `identity.typography`, `identity.elements` dans `content.js`
+- But & décision : `goal` et `decision` dans `content.js`
+- Comparateur avant/après : `assets/projects/tracksolid/reveal-before.webp`, `assets/projects/tracksolid/reveal-after.webp`
 
-## 3. The Logo Atelier
+| Réalisation | Mockup | Visuel à plat |
+|---|---|---|
+| Campagne GT06N | `assets/projects/tracksolid/products/gt06n-mockup.webp` | `assets/projects/tracksolid/products/gt06n-design-plat.webp` |
+| Campagne GT06S | `assets/projects/tracksolid/products/gt06s-mockup.webp` | `assets/projects/tracksolid/products/gt06s-design-plat.webp` |
+| Campagne OBD VL505 | `assets/projects/tracksolid/products/obd-vl505-mockup.webp` | `assets/projects/tracksolid/products/obd-vl505-design-plat.webp` |
 
-Envoyer vos **logos personnels réellement dessinés** en PNG transparent ou SVG (si disponible), idéalement **1200 × 1200 px** chacun. Les noms attendus :
+## The Logo Atelier
 
-- `assets/logo-atelier/logo-01.webp`
-- `assets/logo-atelier/logo-02.webp`
-- `assets/logo-atelier/logo-03.webp`
-- `assets/logo-atelier/logo-04.webp`
-- `assets/logo-atelier/logo-05.webp`
-- `assets/logo-atelier/logo-06.webp`
+Six emplacements disponibles de `assets/logo-atelier/logo-01.webp` à `logo-06.webp`. Remplacer les noms génériques par le nom exact de chaque logo et son statut : travail client, exploration personnelle ou concept.
 
-Pour chaque logo : **nom du concept**, secteur, intention créative en 1 phrase, typographie si pertinente, et statut (client / projet personnel / concept non retenu). Changez les titres dans `content.js` sous `logos`. Ne pas appeler un travail de client « inspiration ». Si un logo est fictif, utiliser « Concept Study » ou « Exploration ».
+## Contact et formation
 
-**Titre validé proposé :** **The Logo Atelier**. Sous-titre : *Marks, monograms & identity explorations*. Autres options : *The Mark Archive*, *Identity Sketchbook*, *Signature Studies*.
+Dans `content.js` : LinkedIn, Behance, Instagram, WhatsApp, email, diplômes avec intitulé / établissement / année vérifiés. Pas de coordonnées fictives.
 
-## 4. Diplômes, liens et informations
+## Règles de présentation
 
-- Diplômes : scan/photographie nette, **1600 × 1100 px** environ ou taille d'origine sans déformer; ajouter **intitulé exact, établissement, année**. Les renseigner dans `content.js > diplomas` avec le chemin d'image si souhaité.
-- Liens **LinkedIn, Behance, Instagram**, et **numéro WhatsApp professionnel** avec indicatif international.
-- Adresse email **professionnelle** pour le contact.
-- Si vous avez des statistiques ou avis clients, fournir seulement des **preuves réelles**.
-- Ne pas envoyer de mots de passe ni de clés API.
+- Ne pas modifier le graphisme ni les textes des étiquettes envoyées.
+- La paire **mockup + étiquette à plat** est utilisée pour les gammes produits. Pour MÉTALLUX et TrackSolid, elle devient **application + création graphique** plutôt qu’une fausse étiquette.
+- Si un projet n'a que deux produits, on montre deux produits, pas quatre éléments inventés.
+- Réduire les photos lourdes en WebP et conserver les sources de travail originales à part.
 
-## 5. Comment ajouter sur GitHub
-
-1. Ouvrir la branche `creative-editions-v3` du dépôt `elhem-portfolioo`.
-2. Créer les sous-dossiers selon les chemins ci-dessus.
-3. Téléverser les images WebP avec les **noms exacts** en respectant minuscules et tirets.
-4. Vérifier le résultat sur navigateur. Les images seront automatiquement affichées.
-5. Pour modifier les textes, couleurs, noms de logos et réseaux : modifier **`content.js`**, pas `app.js`.
-
-**Qualité :** WebP 75–85 % en général, cible 100–500 Ko pour les images ordinaires, jusqu'à ~800 Ko pour certaines couvertures si nécessaire. Garder les textes des étiquettes nets et identiques aux originaux. Éviter les filigranes et les fausses statistiques.
+La version actuelle est une **base prête à remplir**, pas un portfolio final validé : toutes les photos, résultats, diplômes et textes de cas réels nécessitent vérification avant publication.
