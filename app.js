@@ -17,7 +17,7 @@ function updateBook(i){
  // All content below remains visible if the image is not provided.
  $$("#editionPreview img").forEach(img=>{img.onerror=()=>img.remove();});
  $(".open-project").addEventListener("click",()=>openProject(selectedIndex));
- $("#editionCount").textContent=number(selectedIndex)+" / "+number(d.projects.length-1);
+ $("#editionCount").textContent=number(selectedIndex)+" / "+number(d.projects.length);
 }
 function makeBook(){
  $("#editionIndex").innerHTML=d.projects.map((p,i)=>'<button type="button" aria-pressed="false" data-idx="'+i+'"><small>'+esc(p.number)+'</small><span>'+esc(p.title)+'</span><span>↗</span></button>').join("");
@@ -26,14 +26,35 @@ function makeBook(){
  $("#nextEdition").addEventListener("click",()=>updateBook(selectedIndex+1));
  updateBook(0);
 }
+function projectMedia(src,label){
+ return '<div class="portfolio-media">'+empty(label,src)+cover(src,label)+'</div>';
+}
 function openProject(i){
- updateBook(i); const p=d.projects[selectedIndex];
- const section=$("#project");
- $("#projectNumber").textContent="EDITION "+p.number+" / "+p.category.toUpperCase();
- section.style.setProperty("--project-theme",p.theme);section.style.setProperty("--project-paper",p.paper);section.style.setProperty("--project-foreground",p.foreground);
- const gallery=p.images.map((item,j)=>'<figure class="gallery-item"><div class="media">'+empty(item.label,item.src)+cover(item.src,item.label)+'</div><figcaption>'+number(j)+" / "+esc(item.label)+'</figcaption></figure>').join("");
- $("#projectContent").innerHTML='<div class="case-cover"><div class="case-cover-copy"><span class="case-eyebrow">THE CREATIVE EDITIONS / CHAPTER '+esc(p.number)+'</span><div><h2>'+esc(p.title)+'</h2><p>'+esc(p.story)+'</p></div><span class="case-eyebrow">'+esc(p.category)+'</span></div><div class="case-cover-media">'+empty("Project cover",p.cover)+cover(p.cover,p.title)+'</div></div><div class="case-columns"><div><span class="case-kicker">01 / THE BRIEF</span><h3>The challenge.</h3><p>'+esc(p.challenge)+'</p></div><div><span class="case-kicker">02 / CREATIVE DIRECTION</span><h3>The idea.</h3><p>'+esc(p.idea)+'</p><div class="chips">'+p.deliverables.map(v=>'<span>'+esc(v)+'</span>').join("")+'</div></div></div><div class="project-gallery">'+gallery+'</div><div class="project-reveal"><span class="case-kicker">03 / FROM PROCESS TO FINAL</span><h3>Reveal the <i>Design.</i></h3><p>Faites glisser pour comparer la recherche et le résultat final. Ajoutez vos deux visuels pour chaque édition.</p><div class="reveal-frame" style="--position:50%"><div class="reveal-pane after">'+empty("The Final Design",p.after)+cover(p.after,"Résultat final "+p.title)+'<span class="image-label">AFTER / FINAL</span></div><div class="reveal-pane before">'+empty("The Creative Process",p.before)+cover(p.before,"Recherche initiale "+p.title)+'<span class="image-label">BEFORE / PROCESS</span></div><div class="reveal-divider"></div><input class="reveal-range" type="range" min="0" max="100" value="50" aria-label="Comparer avant et après le design"></div></div>';
- $(".reveal-range").addEventListener("input",e=>$(".reveal-frame").style.setProperty("--position",e.target.value+"%"));
+ updateBook(i);
+ const p=d.projects[selectedIndex], section=$("#project");
+ $("#projectNumber").textContent="CHAPTER "+p.number+" / "+p.category.toUpperCase();
+ section.style.setProperty("--project-theme",p.theme);
+ section.style.setProperty("--project-paper",p.paper);
+ section.style.setProperty("--project-foreground",p.foreground);
+ const identity=p.identity||{};
+ const palette=(identity.palette&&identity.palette.length?identity.palette:[{name:"Primary",hex:p.theme},{name:"Secondary",hex:p.paper},{name:"Accent",hex:p.accent}]);
+ const colorHtml=palette.map(c=>'<div class="identity-color"><div class="color-disc" style="background:'+esc(c.hex)+'"></div><span>'+esc(c.name||"")+'</span><small>'+esc(c.hex)+'</small></div>').join("");
+ const type=identity.typography||["À compléter","À compléter"];
+ const elements=identity.elements||[];
+ const elementHtml=elements.map(x=>'<span class="element-tag">'+esc(x)+'</span>').join("")||'<span class="element-tag">Éléments à ajouter</span>';
+ const products=p.products||[];
+ const productsHtml=products.map((prod,j)=>'<article class="product-showcase"><div class="product-heading"><span>'+number(j)+' / THE WORK</span><h4>'+esc(prod.name)+'</h4></div><div class="product-pair"><div class="product-side"><div class="pair-kicker">MOCKUP / PRODUCT</div>'+projectMedia(prod.mockup,prod.name+" · Mockup")+'</div><div class="product-side"><div class="pair-kicker">FLAT DESIGN / ÉTIQUETTE</div>'+projectMedia(prod.label,prod.name+" · Étiquette à plat")+'</div></div></article>').join("");
+ const featured=productsHtml||'<div class="product-pair"><div class="product-side">'+projectMedia(p.images[3]?.src||p.cover,"Mockup final")+'</div><div class="product-side">'+projectMedia(p.images[4]?.src||p.cover,"Design à plat")+'</div></div>';
+ const supportImages=p.supports||[];
+ const supports=supportImages.length?'<div class="support-grid">'+supportImages.map(a=>'<figure>'+projectMedia(a.src,a.label)+'<figcaption>'+esc(a.label)+'</figcaption></figure>').join("")+'</div>':"";
+ const compare='<div class="compact-reveal"><div class="reveal-label"><span>REVEAL THE DESIGN</span><span>AVANT / APRÈS</span></div><div class="reveal-frame" style="--position:50%"><div class="reveal-pane after">'+empty("Final",p.after)+cover(p.after,"Résultat final "+p.title)+'<span class="image-label">APRÈS</span></div><div class="reveal-pane before">'+empty("Concept",p.before)+cover(p.before,"Concept "+p.title)+'<span class="image-label">AVANT</span></div><div class="reveal-divider"></div><input class="reveal-range" type="range" min="0" max="100" value="50" aria-label="Comparer le concept et le résultat"></div></div>';
+ $("#projectContent").innerHTML=
+ '<div class="case-cover case-cover-clean"><div class="case-cover-copy"><span class="case-eyebrow">THE CREATIVE EDITIONS / CHAPTER '+esc(p.number)+'</span><div><h2>'+esc(p.title)+'</h2><p>'+esc(p.story)+'</p></div><span class="case-eyebrow">'+esc(p.category)+'</span></div><div class="case-cover-media">'+empty("Cover",p.cover)+cover(p.cover,p.title)+'</div></div>'+
+ '<div class="case-summary"><div class="summary-item"><span>01 / PROJECT GOAL</span><p>'+esc(p.goal||p.challenge)+'</p></div><div class="summary-item"><span>02 / DESIGN DECISION</span><p>'+esc(p.decision||p.idea)+'</p></div></div>'+
+ '<section class="identity-board" aria-label="Identité visuelle de '+esc(p.title)+'"><div class="work-section-head"><span>03 / VISUAL IDENTITY</span><h3>Visual <i>Identity.</i></h3></div><div class="identity-panels"><div class="identity-logo"><div class="pair-kicker">LOGO / MARK</div>'+projectMedia(identity.logo||p.images[1]?.src||p.cover,p.title+" logo")+'</div><div class="identity-details"><div class="identity-panel"><span class="pair-kicker">COLOR PALETTE</span><div class="color-palette">'+colorHtml+'</div></div><div class="identity-panel"><span class="pair-kicker">TYPOGRAPHY</span><div class="type-pair">'+type.map(t=>'<div><strong>Aa</strong><small>'+esc(t)+'</small></div>').join("")+'</div></div><div class="identity-panel"><span class="pair-kicker">GRAPHIC ELEMENTS</span><div class="element-tags">'+elementHtml+'</div></div></div></div></section>'+
+ '<section class="final-work" aria-label="Travaux de '+esc(p.title)+'"><div class="work-section-head"><span>04 / SELECTED WORK</span><h3>The Final <i>Work.</i></h3><p>Le design appliqué : mockup et fichier à plat, côte à côte.</p></div>'+featured+supports+compare+'</section>';
+ const slider=$(".reveal-range",section);
+ if(slider)slider.addEventListener("input",e=>$(".reveal-frame",section).style.setProperty("--position",e.target.value+"%"));
  $$("#projectContent img").forEach(img=>{img.onerror=()=>img.classList.add("is-missing");if(img.complete&&!img.naturalWidth)img.classList.add("is-missing");});
  section.hidden=false;
  section.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});
